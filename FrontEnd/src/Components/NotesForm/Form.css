@@ -1,0 +1,204 @@
+.notes-parent-folder {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark Mode Styling */
+body.dark-mode .notes-form,
+body.dark-mode .notes-form p,
+body.dark-mode .notes-form label {
+  background: #1c1c1c;
+  color: #f5f5f5;
+}
+
+body.dark-mode .notes-form input,
+body.dark-mode .notes-form textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #3a5c91;
+}
+
+body.dark-mode .notes-form .form-buttons :last-child{
+  background-color: #1561be;
+}
+
+/* Main Form */
+.notes-form {
+  background: linear-gradient(145deg, #eef3f8, #d9e8f2);
+  width: 500px;
+  padding: 2rem 2rem 1.5rem;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid rgba(58, 92, 145, 0.15);
+}
+
+/*  Heading Section */
+.form-heading p:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.form-heading p:last-child {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0;
+}
+
+/*  Input Section */
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-inputs {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+  background: #f8fafc;
+  color: #111;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-inputs:focus {
+  border-color: #3a5c91;
+  box-shadow: 0 0 0 3px rgba(63, 94, 144, 0.2);
+}
+
+/* Buttons Section */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-buttons button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Cancel button */
+.form-buttons button:first-child {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.form-buttons button:first-child:hover {
+  background: #e5e7eb;
+}
+
+/* Create / Save button */
+.form-buttons button:last-child {
+  background-color: #3f77eff5;
+  color: #fff;
+}
+
+.form-buttons button:last-child:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(63, 94, 144, 0.25);
+}
+
+@media (max-width: 700px) {
+  .notes-form {
+    width: 450px;
+    padding: 1rem 1.5rem;
+    margin: 5rem auto;
+  }
+  .form-input textarea {
+    height: 100px;
+    font-size: 15px;
+  }
+  .form-input input {
+    font-size: 15px;
+  }
+  .form-buttons button {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .notes-form {
+    width: 380px;
+    padding: 1rem 1.5rem;
+    margin: 5rem auto;
+  }
+  .form-input textarea {
+    height: 110px;
+    font-size: 13px;
+  }
+  .form-input input {
+    font-size: 13px;
+  }
+  .form-buttons button {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .notes-form {
+    width: 330px;
+    padding: 1rem 1.5rem;
+    margin: 5rem auto;
+  }
+  .form-input textarea {
+    height: 130px;
+    font-size: 10px;
+  }
+  .form-input input {
+    font-size: 10px;
+  }
+  .form-buttons button {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.5rem;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .notes-form {
+    width: 330px;
+    padding: 1rem 1.5rem;
+    margin: 5rem auto;
+  }
+  .form-input textarea {
+    height: 130px;
+    font-size: 10px;
+  }
+  .form-input input {
+    font-size: 10px;
+  }
+  .form-buttons button {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.5rem;
+  }
+}

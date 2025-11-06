@@ -1,0 +1,186 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  align-items: center;
+  position: sticky;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  margin-top: 0;
+}
+
+.nav-title {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-wrap: nowrap;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-right button {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-color: #3f77eff5;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
+  white-space: nowrap;
+}
+
+.nav-right button:hover {
+  background-color: #5389fdf3;
+}
+
+.navbar .right-sec {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar .right-sec p {
+  cursor: pointer;
+}
+
+/* Dark Mode  */
+
+body.dark-mode .navbar {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+  color: #f1f5f9;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+
+body.dark-mode .navbar .brand:hover {
+  color: #c7d2fe;
+}
+
+/* Navbar Links */
+body.dark-mode .navbar a {
+  color: #e2e8f0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .navbar a:hover {
+  color: #93c5fd;
+}
+
+/* Navbar Buttons (e.g., Add Note, Logout, etc.) */
+body.dark-mode .navbar button {
+  background: linear-gradient(90deg, #1e4585, #036171);
+  color: #e2e8f0;
+  border: none;
+  cursor: pointer;
+}
+
+body.dark-mode .navbar button:hover {
+  background: linear-gradient(90deg, #295daf, #05839a);
+}
+
+/* Navbar Toggle / Icons */
+body.dark-mode .navbar .icon {
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode .navbar .icon:hover {
+  color: #60a5fa;
+  transform: scale(1.1);
+}
+
+@media (max-width: 880px) {
+  .nav-right button {
+    margin-top: 0.8rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    background-color: #3f77eff5;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 460px) {
+  .nav-right button {
+    margin-top: 0.8rem;
+    width: 90%;
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    background-color: #3f77eff5;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-right button {
+    margin-top: 0.8rem;
+    width: 90%;
+    font-size: 12px;
+    padding: 0.3rem 1rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    background-color: #3f77eff5;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
+    white-space: nowrap;
+  }
+  .nav-right {
+    gap: 0.4rem;
+  }
+  .nav-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-right button {
+    margin-top: 0.8rem;
+    width: 90%;
+    font-size: 10px;
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 100;
+    background-color: #3f77eff5;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
+    white-space: nowrap;
+  }
+  .nav-right {
+    gap: 0.3rem;
+  }
+  .nav-title {
+    font-size: 20px;
+  }
+}
