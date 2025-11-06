@@ -12,9 +12,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
-#root{
-    max-height: 100dvh;
-    min-height: 100dvh;
-    display: flex;
-    overflow: hidden;
+#root {
+  max-height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
 }
