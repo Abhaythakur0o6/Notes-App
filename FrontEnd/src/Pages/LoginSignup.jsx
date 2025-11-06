@@ -20,7 +20,7 @@ const LoginSignup = () => {
   };
 
   const handleSignup = () => {
-    fetch("http://localhost:5000/signup", {
+    fetch(`${import.meta.env.VITE_NOTES_API_URL}/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -41,7 +41,7 @@ const LoginSignup = () => {
   };
 
   const handleLogin = () => {
-    fetch("http://localhost:5000/login", {
+    fetch(`${import.meta.env.VITE_NOTES_API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

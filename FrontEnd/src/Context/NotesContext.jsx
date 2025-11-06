@@ -38,7 +38,7 @@ export const NotesContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (!currentUserId) return;
-        fetch("http://localhost:5000/allnotes", {
+        fetch(`${import.meta.env.VITE_NOTES_API_URL}/allnotes`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`,

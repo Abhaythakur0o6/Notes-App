@@ -16,7 +16,7 @@ const Card = (props) => {
   }
 
   const deleteNote = (id) => {
-    fetch("http://localhost:5000/deletenote", {
+    fetch(`${import.meta.env.VITE_NOTES_API_URL}/deletenote`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: id })

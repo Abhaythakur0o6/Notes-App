@@ -29,7 +29,7 @@ const Form = (props) => {
       return;
     }
     if (editNote) {
-      fetch("http://localhost:5000/updatenote", {
+      fetch(`${import.meta.env.VITE_NOTES_API_URL}/updatenote`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const Form = (props) => {
         })
     } else {
       const user = currentUserId;
-      fetch("http://localhost:5000/newnote", {
+      fetch(`${import.meta.env.VITE_NOTES_API_URL}/newnote`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
