@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LoginSignup from './Pages/LoginSignup'
 import MainPage from './Pages/MainPage'
-import ProtectedRoute from './protectedRoute'
+import ProtectedRoute from './ProtectedRoute.jsx'
 
 const App = () => {
   return (
