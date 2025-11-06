@@ -30,7 +30,7 @@ const Card = (props) => {
   }
 
   return (
-    <div className="card">
+    <div className="card" onClick={editNote}>
       <div className="card-heading">
         <h3 className="card-title">{props.title}</h3>
         <div className="card-heading-button">

@@ -26,7 +26,7 @@ body.dark-mode .notes-form textarea {
   border: 1px solid #3a5c91;
 }
 
-body.dark-mode .notes-form .form-buttons :last-child{
+body.dark-mode .notes-form .form-buttons :last-child {
   background-color: #1561be;
 }
 
@@ -172,17 +172,16 @@ body.dark-mode .notes-form .form-buttons :last-child{
   }
   .form-input textarea {
     height: 130px;
-    font-size: 10px;
+    font-size: 13px;
   }
   .form-input input {
-    font-size: 10px;
+    font-size: 13px;
   }
   .form-buttons button {
     padding: 0.6rem 1.3rem;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
-
 
 @media (max-width: 380px) {
   .notes-form {
@@ -192,13 +191,13 @@ body.dark-mode .notes-form .form-buttons :last-child{
   }
   .form-input textarea {
     height: 130px;
-    font-size: 10px;
+    font-size: 13px;
   }
   .form-input input {
-    font-size: 10px;
+    font-size: 13px;
   }
   .form-buttons button {
     padding: 0.6rem 1.3rem;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
