@@ -8,12 +8,8 @@
 
 body {
   background-color: #f3e8ff;
-  min-height: 100vh;
   transition: background-color 0.3s ease;
-}
-
-#root {
-  max-height: 100dvh;
-  min-height: 100dvh;
+  overflow-x: hidden;
   overflow: hidden;
+  height: 100dvh;
 }
