@@ -47,7 +47,7 @@ Then open http://localhost:5173 to view it in your browser.
 ## 🌐 Live Demo
 
 You can check out the live version here:  
-👉 [Notes App on Netlify](https://your-notesapp-link.netlify.app)
+👉 [Notes App on Vercel](https://notes-app-lac-omega-62.vercel.app/)
 ## 💡 What I Learned
 
 - Building a complete MERN-stack application from scratch  

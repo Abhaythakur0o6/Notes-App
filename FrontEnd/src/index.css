@@ -10,6 +10,10 @@ body {
   background-color: #f3e8ff;
   transition: background-color 0.3s ease;
   overflow-x: hidden;
-  overflow: hidden;
+  overflow-y: scroll;
   height: 100dvh;
+}
+
+html{
+  overflow: hidden;
 }

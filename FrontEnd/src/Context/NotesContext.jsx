@@ -11,10 +11,13 @@ export const NotesContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        if (darkMode) {
-            document.body.classList.add("dark-mode");
-        } else {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") {
+            localStorage.setItem("theme", "light")
             document.body.classList.remove("dark-mode");
+        } else {
+            localStorage.setItem("theme", "dark")
+            document.body.classList.add("dark-mode");
         }
     }, [darkMode]);
 
@@ -38,10 +41,15 @@ export const NotesContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (!currentUserId) return;
+        const token = localStorage.getItem("token")
+        if (!token) {
+            console.log("No token found")
+            return
+        }
         fetch(`${import.meta.env.VITE_NOTES_API_URL}/allnotes`, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`,
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ currentUserId })

@@ -18,7 +18,10 @@ const Card = (props) => {
   const deleteNote = (id) => {
     fetch(`${import.meta.env.VITE_NOTES_API_URL}/deletenote`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Authorization": `Bearer ${ localStorage.getItem("token") }`,
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({ _id: id })
     })
       .then(res => res.json())
@@ -30,12 +33,20 @@ const Card = (props) => {
   }
 
   return (
-    <div className="card" onClick={editNote}>
+    <div className="card" onClick={(e) => {
+      e.stopPropagation()
+      editNote();
+    }
+    }>
       <div className="card-heading">
         <h3 className="card-title">{props.title}</h3>
         <div className="card-heading-button">
           <button onClick={editNote} ><i className="fa-solid fa-pencil"></i></button>
-          <button onClick={() => deleteNote(props.id)} ><i className="fa-solid fa-trash"></i></button>
+          <button onClick={(e) => {
+            e.stopPropagation();
+            deleteNote(props.id)
+          }
+          } ><i className="fa-solid fa-trash"></i></button>
         </div>
       </div>
       <p className="card-notes">{props.content}</p>

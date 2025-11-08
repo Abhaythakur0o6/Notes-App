@@ -6,21 +6,20 @@ import "./Navbar.css";
 const Navbar = () => {
   const { toggleForm, setCurrentUserId } = useNoteContext();
   const navigate = useNavigate();
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState();
+  const [_, forceUpdate] = useState(0);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.body.classList.add("dark-mode");
-      setDarkMode(true);
-    }
-  }, []);
 
   const toggleTheme = () => {
-    const newTheme = darkMode ? "light" : "dark";
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("theme", newTheme);
-    setDarkMode(!darkMode);
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      localStorage.setItem("theme", "light")
+      document.body.classList.remove("dark-mode");
+    } else {
+      localStorage.setItem("theme", "dark")
+      document.body.classList.add("dark-mode");
+    }
+    forceUpdate(n => n + 1);
   };
 
   const signOut = () => {
@@ -29,6 +28,8 @@ const Navbar = () => {
     setCurrentUserId("");
     navigate("/");
   };
+
+  const currentPageTheme = localStorage.getItem("theme")
 
   return (
     <nav className="navbar">
@@ -43,7 +44,7 @@ const Navbar = () => {
           Logout
         </button>
         <button className="nav-btn theme-toggle" onClick={toggleTheme}>
-          {darkMode ? "☀️" : "🌙"}
+          {currentPageTheme === "dark" ?( <i class="fa-solid fa-sun"></i>) : (<i class="fa-solid fa-moon"></i>)}
         </button>
       </div>
     </nav>
@@ -51,3 +52,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// {darkMode ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
