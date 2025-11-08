@@ -1,7 +1,7 @@
 body.dark-mode .main-page {
   background: linear-gradient(135deg, #05070f, #0d1524, #1a2a3c);
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 100dvh;
+  min-height: 100dvh;
   width: 100%;
   color: #e2e8f0;
   transition: background 0.6s ease, color 0.3s ease;
@@ -14,14 +14,10 @@ body.dark-mode .main-notes::-webkit-scrollbar {
 
 .main-page {
   background: linear-gradient(135deg, #91b5f3, #accef3b1, #cef1eebb);
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 100dvh;
+  min-height: 100dvh;
   overflow: scroll;
   width: 100%;
-}
-
-.card {
-  margin-top: 0.5rem;
 }
 
 body.dark-mode .main-page {
@@ -35,6 +31,7 @@ body.dark-mode .main-page {
   scroll-behavior: smooth;
   scrollbar-width: none;
   padding-top: 90px;
+  padding-bottom: 10px;
   justify-items: center;
   gap: 1.5rem;
 }

@@ -44,7 +44,7 @@ const Navbar = () => {
           Logout
         </button>
         <button className="nav-btn theme-toggle" onClick={toggleTheme}>
-          {currentPageTheme === "dark" ?( <i class="fa-solid fa-sun"></i>) : (<i class="fa-solid fa-moon"></i>)}
+          {currentPageTheme === "dark" ?( <i className="fa-solid fa-sun"></i>) : (<i className="fa-solid fa-moon"></i>)}
         </button>
       </div>
     </nav>
@@ -52,5 +52,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// {darkMode ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}

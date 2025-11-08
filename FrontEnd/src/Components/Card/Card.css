@@ -1,6 +1,6 @@
 .card {
   background: linear-gradient(135deg, #ffffff, #f9f1ff);
-  width: 92%;
+  width: 93%;
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -163,7 +163,7 @@ body.dark-mode .time {
 @media (max-width: 470px) {
   .card {
     background: linear-gradient(135deg, #ffffff, #f9f1ff);
-    width: 370px;
+    width: 430px;
     height: 130px;
     display: flex;
     flex-direction: column;
@@ -177,10 +177,10 @@ body.dark-mode .time {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .card {
     background: linear-gradient(135deg, #ffffff, #f9f1ff);
-    width: 330px;
+    width: 355px;
     height: 130px;
     display: flex;
     flex-direction: column;
@@ -189,7 +189,7 @@ body.dark-mode .time {
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease-in-out;
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     border: 1px solid rgba(255, 255, 255, 0.112);
   }
 
