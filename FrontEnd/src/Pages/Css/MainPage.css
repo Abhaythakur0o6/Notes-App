@@ -13,7 +13,8 @@ body.dark-mode .main-notes::-webkit-scrollbar {
 
 .main-page {
   background: linear-gradient(135deg, #91b5f3, #accef3b1, #cef1eebb);
-  min-height: 100vh;
+  max-height: 100vh;
+  overflow: scroll;
   width: 100%;
 }
 
