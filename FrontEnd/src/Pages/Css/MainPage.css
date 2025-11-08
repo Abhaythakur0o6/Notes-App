@@ -1,10 +1,10 @@
 body.dark-mode .main-page {
   background: linear-gradient(135deg, #05070f, #0d1524, #1a2a3c);
-  min-height: 100vh;
+  max-height: 100vh;
   width: 100%;
   color: #e2e8f0;
   transition: background 0.6s ease, color 0.3s ease;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 body.dark-mode .main-notes::-webkit-scrollbar {
