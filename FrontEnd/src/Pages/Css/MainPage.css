@@ -54,9 +54,3 @@ body.dark-mode .main-page {
     justify-items: center;
   }
 }
-
-@media (max-width: 450px) {
-  .card {
-    margin-top: -1rem;
-  }
-}

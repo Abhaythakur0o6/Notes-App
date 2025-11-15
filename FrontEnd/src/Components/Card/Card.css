@@ -177,20 +177,14 @@ body.dark-mode .time {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 440px) {
   .card {
     background: linear-gradient(135deg, #ffffff, #f9f1ff);
-    width: 355px;
+    width: 385px;
     height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1.2rem 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.2s ease-in-out;
     margin: 0.5rem 0rem;
-    border: 1px solid rgba(255, 255, 255, 0.112);
+    margin-top: -0.8rem;
   }
 
   .card-title {
@@ -199,5 +193,23 @@ body.dark-mode .time {
   .card-notes {
     color: #555;
     font-size: 0.87rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    background: linear-gradient(135deg, #ffffff, #f9f1ff);
+    width: 365px;
+    margin: 0.5rem 0rem;
+    margin-top: -0.8rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .card {
+    background: linear-gradient(135deg, #ffffff, #f9f1ff);
+    width: 333px;
+    margin: 0.5rem 0rem;
+    margin-top: -0.8rem;
   }
 }

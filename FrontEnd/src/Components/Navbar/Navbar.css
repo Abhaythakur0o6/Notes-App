@@ -128,22 +128,36 @@ body.dark-mode .navbar .icon:hover {
   .nav-right button {
     margin-top: 0rem !important;
     width: 90%;
-    font-size: 11px;
-    padding: 0.2rem 1rem;
-    border-radius: 8px;
-    border: none;
-    color: white;
+    font-size: 12px;
+    padding: 0.3rem 1rem;
+    border-radius: 7px;
     font-weight: 500;
-    background-color: #3f77eff5;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(61, 127, 214, 0.2);
-    white-space: nowrap;
   }
   .nav-right {
-    gap: 0.3rem;
+    gap: 0.5rem;
     margin-top: 0.4rem;
   }
   .nav-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    background-color: white;
+    align-items: center;
+    position: sticky;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .nav-right {
+    gap: 0.3rem;
+    margin-top: 0.4rem;
   }
 }
