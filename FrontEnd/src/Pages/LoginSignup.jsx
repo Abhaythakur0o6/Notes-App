@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNoteContext } from "../Context/NotesContext";
 import "./Css/LoginSignup.css"
 
 const LoginSignup = () => {
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) navigate("/notes");
+  }, []);
+
   const { setCurrentUserId } = useNoteContext();
   const navigate = useNavigate();
 
@@ -12,7 +18,7 @@ const LoginSignup = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("info");
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (name === "email") setEmail(value);
@@ -122,7 +128,7 @@ const LoginSignup = () => {
             {state === "login" ? "Sign In" : "Create Account"}
           </button>
         </form>
-        
+
         <div className="ls-toggle">
           {state === "login"
             ? "Don’t have an account?"

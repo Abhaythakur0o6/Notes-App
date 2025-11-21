@@ -11,7 +11,7 @@ Built with **Vite**, **React**, **Node.js**, **Express**, and **MongoDB**, it fe
 - 💡 Dark and light mode support  
 - 🎨 Modern gradient-based UI design  
 - ⚡ Built using Vite for faster development  
-- 🧭 Organized MVC folder structure  
+- 🧭 Well-structured backend (Models, Controllers, Routes)
 - 📱 Fully responsive design for all devices
 
 ## 🛠️ Tech Stack
@@ -19,8 +19,7 @@ Built with **Vite**, **React**, **Node.js**, **Express**, and **MongoDB**, it fe
 **Frontend:** React, Vite, CSS  
 **Backend:** Node.js, Express.js  
 **Database:** MongoDB  
-**Authentication:** JSON Web Token (JWT)  
-**Architecture:** MVC Pattern  
+**Authentication:** JSON Web Token (JWT)
 ## ⚙️ Getting Started
 
 Follow these steps to set up and run the project locally:
@@ -47,7 +46,7 @@ Then open http://localhost:5173 to view it in your browser.
 ## 🌐 Live Demo
 
 You can check out the live version here:  
-👉 [Notes App on Vercel]([https://your-notesapp-link.netlify.app](https://notes-app-lac-omega-62.vercel.app/))
+[Notes App on Render](https://notes-app-frontend-9jen.onrender.com/)
 ## 💡 What I Learned
 
 - Building a complete MERN-stack application from scratch  

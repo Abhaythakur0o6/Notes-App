@@ -209,3 +209,12 @@ body {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 392px) {
+  .ls-card {
+    width: 400px;
+    padding: 1.75rem;
+    border-radius: 10px;
+    height: 420px;
+  }
+}

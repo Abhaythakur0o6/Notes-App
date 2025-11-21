@@ -5,21 +5,23 @@ const NoteContext = createContext();
 export const NotesContextProvider = ({ children }) => {
 
     //For Dark Mode
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(
+        localStorage.getItem("theme") === "dark"
+    );
     const toggleTheme = () => {
-        setDarkMode(!darkMode)
+        setDarkMode(prev => !prev);
     }
 
     useEffect(() => {
-        const currentTheme = localStorage.getItem("theme");
-        if (currentTheme === "dark") {
-            localStorage.setItem("theme", "light")
-            document.body.classList.remove("dark-mode");
-        } else {
-            localStorage.setItem("theme", "dark")
+        if (darkMode) {
             document.body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
         }
     }, [darkMode]);
+
 
     // Show Form 
 
